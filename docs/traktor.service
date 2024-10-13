@@ -1,0 +1,17 @@
+[Unit]
+Description=traktor
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=15
+User=traktor
+WorkingDirectory=/home/traktor/traktor
+ExecStart=/home/traktor/traktor/server
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target

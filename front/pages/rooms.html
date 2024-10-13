@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" class="h-100">
+  <load src="/pages/components/head.html" title="Rooms" />
+  <body class="h-100">
+    <div class="d-flex flex-nowrap min-vh-100">
+      <load src="/pages/components/sidebar.html" />
+      <div class="traktor-divider"></div>
+      <div class="px-4 py-3 text-bg-dark traktor-manage-partial">
+        <h1 class="mb-5">Manage rooms</h1>
+
+        <h3 class="mt-5 mb-0 pb-0">
+          <i class="bi bi-list-task"></i> Rooms list
+        </h3>
+        <hr class="mt-2 mb-1" />
+
+        <table class="table mb-4 traktor-rooms-table">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Created by</th>
+              <th scope="col">Created at</th>
+              <th scope="col" width="100"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <template id="room-row">
+              <tr>
+                <td>room name</td>
+                <td>created by</td>
+                <td class="font-monospace">created at</td>
+                <td>
+                  <button class="btn btn-danger btn-sm">Remove</button>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+
+        <div class="mb-4">
+          <load src="/pages/components/loader.html" prefix="rooms-table" />
+        </div>
+
+        <h3 class="mt-5 mb-0 pb-0">
+          <i class="bi bi-database-add"></i> Add room
+        </h3>
+        <hr class="mt-2 mb-3" />
+
+        <form class="row g-3 mb-3">
+          <div class="col-md-12">
+            <label for="add-room-name" class="form-label">Name</label>
+            <input type="email" class="form-control" id="add-room-name" />
+          </div>
+        </form>
+        <div>
+          <load
+            src="/pages/components/loader-button.html"
+            prefix="add-room"
+            text="Add room"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/pages/rooms.ts"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

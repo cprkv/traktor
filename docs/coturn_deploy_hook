@@ -1,0 +1,9 @@
+#!/bin/bash -e
+
+for certfile in fullchain.pem privkey.pem ; do
+  cp -L /etc/letsencrypt/live/TURN_DOMAIN/"${certfile}" /etc/turnserver/"${certfile}".new
+  chown turnserver:turnserver /etc/turnserver/"${certfile}".new
+  mv /etc/turnserver/"${certfile}".new /etc/turnserver/"${certfile}"
+done
+
+systemctl restart coturn.service

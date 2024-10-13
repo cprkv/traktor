@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable",
+      "deno.ns",
+      "deno.unstable"
+    ]
+  },
+  "nodeModulesDir": "auto",
+  "tasks": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "imports": {
+    "typescript": "npm:typescript@5.5.3",
+    "vite": "npm:vite@5.4.8",
+    "vite-plugin-html-inject": "npm:vite-plugin-html-inject@1.1.2",
+    "peerjs": "npm:peerjs@1.5.4"
+  }
+}

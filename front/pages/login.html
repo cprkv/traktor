@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" class="h-100">
+  <load src="/pages/components/head.html" title="Login" />
+  <body class="h-100">
+    <div class="mx-auto p-2 pt-5" style="width: 400px">
+      <form>
+        <div class="mb-3">
+          <label for="login-input" class="form-label">Login</label>
+          <input
+            type="text"
+            class="form-control form-control-lg"
+            id="login-input"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="password-input" class="form-label">Password</label>
+          <input
+            type="password"
+            class="form-control form-control-lg"
+            id="password-input"
+          />
+        </div>
+      </form>
+
+      <div class="mt-3">
+        <load
+          src="/pages/components/loader-button.html"
+          prefix="login"
+          text="Login"
+          btn-class="btn-lg"
+        />
+      </div>
+    </div>
+
+    <script type="module" src="/src/pages/login.ts"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

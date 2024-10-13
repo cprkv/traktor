@@ -1,0 +1,31 @@
+<button
+  type="submit"
+  class="btn btn-primary w-100 d-flex align-items-center {=$btn-class}"
+  id="{=$prefix}-button"
+>
+  <span class="flex-grow-1">{=$text}</span>
+  <div
+    class="spinner-border spinner-border-sm traktor-loader"
+    role="status"
+    id="{=$prefix}-loader"
+  >
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</button>
+
+<div
+  class="alert alert-danger mt-3 mb-0 traktor-error"
+  id="{=$prefix}-error"
+  role="alert"
+>
+  <strong>Error:</strong>
+  <span>reason</span>
+</div>
+
+<div
+  class="alert alert-success mt-3 mb-0 traktor-error"
+  id="{=$prefix}-success"
+  role="alert"
+>
+  <strong>Success!</strong>
+</div>

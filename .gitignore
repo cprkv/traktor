@@ -1,0 +1,5 @@
+.vscode
+*.db
+*.db-journal
+jwt.json
+/bin

@@ -1,0 +1,22 @@
+{
+  "tasks": {
+    "start": "deno run -A index.ts",
+    "dev": "deno run --watch -A index.ts"
+  },
+  "imports": {
+    "cors": "https://deno.land/x/cors@v1.2.2/mod.ts",
+    "sqlite": "https://deno.land/x/sqlite@v3.9.1/mod.ts",
+    "djwt": "jsr:@zaubrik/djwt@3.0.2",
+    "oak": "jsr:@oak/oak@17.1.0",
+    "@std/fs": "jsr:@std/fs@1.0.4",
+    "@std/path": "jsr:@std/path@1.0.6",
+    "@std/media-types": "jsr:@std/media-types@1.0.3",
+    "@std/dotenv": "jsr:@std/dotenv@0.225.2",
+    "@logtape/logtape": "jsr:@logtape/logtape@0.6.3",
+    "dayjs": "npm:dayjs@1.11.13"
+  },
+  "lock": {
+    "path": "./deno.lock",
+    "frozen": false
+  }
+}

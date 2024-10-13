@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" class="h-100">
+  <load src="/pages/components/head.html" title="Main" />
+  <body class="h-100">
+    <div class="d-flex flex-nowrap min-vh-100">
+      <load src="/pages/components/sidebar.html" />
+
+      <div class="traktor-divider"></div>
+
+      <div class="px-4 py-3 text-bg-dark traktor-manage-partial">
+        <h1 id="room-name" class="mb-4">Room</h1>
+
+        <div
+          id="room-error"
+          class="alert alert-danger mt-3 traktor-error d-flex"
+          role="alert"
+        >
+          <div><i class="bi bi-exclamation-octagon pe-3"></i></div>
+          <div class="flex-grow-1 pe-2">
+            <span id="room-error-message"></span>
+            <pre id="room-error-details" class="mt-1 mb-0"></pre>
+          </div>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="alert"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div id="room-enter-message" class="my-3 card border-danger">
+          <div class="card-body">
+            <h3 class="card-title">This room is marked as 18+</h3>
+            <div class="d-flex align-items-center">
+              <span class="pe-3">Do you old enough to enter?</span>
+              <button id="room-enter-button" class="btn btn-primary">
+                Yes!
+              </button>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="room-share-screen">
+              <label class="form-check-label" for="room-share-screen">
+                Share screen
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="vstack gap-3">
+          <template id="traktor-room-card-template">
+            <div class="card traktor-room-card">
+              <div class="card-body d-flex">
+                <img
+                  src="/nier-2b.webp"
+                  width="120"
+                  height="120"
+                  class="me-3"
+                />
+                <div class="w-100">
+                  <h3 class="card-title">vadik</h3>
+                  <div class="card-text">
+                    <label for="vadik-volume" class="form-label">
+                      Volume: 100%
+                    </label>
+                    <input
+                      type="range"
+                      class="traktor-range traktor-room-member-volume"
+                      list="vadik-volume-list"
+                      min="0"
+                      max="1"
+                      value="1"
+                      step="0.05"
+                    />
+                    <datalist id="vadik-volume-list">
+                      <option value="0" label="0%"></option>
+                      <option value="1" label="100%"></option>
+                    </datalist>
+                    <audio
+                      controls
+                      class="traktor-room-remote-stream"
+                      muted="true"
+                    ></audio>
+                    <video
+                      controls
+                      class="traktor-room-remote-stream-video"
+                      muted="true"
+                    ></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/pages/room.ts"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

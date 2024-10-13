@@ -1,0 +1,55 @@
+<div
+  class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
+  style="width: 280px"
+>
+  <a
+    href="/pages/main.html"
+    class="d-flex align-items-center ms-3 mb-3 mb-md-0 me-md-auto text-white text-decoration-none"
+  >
+    <i class="bi me-2 bi-discord"></i>
+    <span class="fs-4">Traktor</span>
+  </a>
+
+  <hr />
+
+  <div class="nav nav-pills flex-column mb-auto">
+    <div class="vstack mb-auto" id="room-links">
+      <template id="room-link">
+        <a
+          href="#"
+          class="nav-link py-1 d-inline-flex align-items-center flex-nowrap"
+        >
+          <i class="bi me-2 bi-hash"></i>
+          <div class="pe-2 traktor-room-name">Обсуждальная</div>
+          <div class="badge rounded-pill text-bg-secondary traktor-room-counter">1</div>
+        </a>
+      </template>
+    </div>
+  </div>
+
+  <hr />
+
+  <div class="nav nav-pills d-flex flex-column gap-2">
+    <div class="nav-link py-1 text-white">
+      <i class="bi me-1 bi-person-circle"></i>
+      <strong id="sidebar-login">login</strong>
+    </div>
+    <a
+      class="nav-link py-0 text-white fw-light d-none"
+      href="/pages/rooms.html"
+      id="sidebar-manage-rooms"
+    >
+      <small><i class="bi me-2 bi-database-gear"></i>Manage rooms</small>
+    </a>
+    <a
+      class="nav-link py-0 text-white fw-light d-none"
+      href="/pages/users.html"
+      id="sidebar-manage-users"
+    >
+      <small><i class="bi me-2 bi-person-gear"></i>Manage users</small>
+    </a>
+    <a class="nav-link py-0 text-white fw-light" href="" id="sidebar-logout">
+      <small><i class="bi me-2 bi-box-arrow-left"></i>Logout</small>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark" class="h-100">
+  <load src="/pages/components/head.html" title="Manage users" />
+  <body class="h-100">
+    <div class="d-flex flex-nowrap min-vh-100">
+      <load src="/pages/components/sidebar.html" />
+      <div class="traktor-divider"></div>
+      <div class="px-4 py-3 text-bg-dark traktor-manage-partial">
+        <h1 class="mb-5">Manage users</h1>
+
+        <h3 class="mt-5 mb-0 pb-0">
+          <i class="bi bi-list-task"></i> Users list
+        </h3>
+        <hr class="mt-2 mb-1" />
+
+        <table class="table mb-4 traktor-users-table">
+          <thead>
+            <tr>
+              <th scope="col">Login</th>
+              <th scope="col" width="120">Create users?</th>
+              <th scope="col" width="120">Create rooms?</th>
+              <th scope="col" width="100"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <template id="user-row">
+              <tr>
+                <td>vadik</td>
+                <td>✅</td>
+                <td>✅</td>
+                <td>
+                  <button class="btn btn-danger btn-sm" id="remove-user">
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            </template>
+          </tbody>
+        </table>
+        <div class="mb-4">
+          <load src="/pages/components/loader.html" prefix="user-table" />
+        </div>
+
+        <h3 class="mt-5 mb-0 pb-0">
+          <i class="bi bi-person-add"></i> Add user
+        </h3>
+        <hr class="mt-2 mb-3" />
+
+        <form class="row g-3 mb-3">
+          <div class="col-md-6">
+            <label for="add-user-login" class="form-label">Login</label>
+            <input type="email" class="form-control" id="add-user-login" />
+          </div>
+          <div class="col-md-6">
+            <label for="add-user-password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="add-user-password"
+            />
+          </div>
+          <div class="col-4">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="add-user-can-create-rooms"
+              />
+              <label class="form-check-label" for="add-user-can-create-rooms">
+                Can create <strong>rooms</strong>
+              </label>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="add-user-can-create-users"
+              />
+              <label class="form-check-label" for="add-user-can-create-users">
+                Can create <strong>users</strong>
+              </label>
+            </div>
+          </div>
+        </form>
+        <div>
+          <load
+            src="/pages/components/loader-button.html"
+            prefix="add-user"
+            text="Add user"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/pages/users.ts"></script>
+    <script src="/bootstrap/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
